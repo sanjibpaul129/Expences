@@ -1,0 +1,23 @@
+<h1>Personnel Index</h1>
+<%= link_to 'New Personnel', personnels_personnel_new_url %>
+<table>
+  <thead>
+      <th>Name</th>
+      <th>Email</th>
+      
+      <th></th>
+      <th></th>
+  </thead>
+  <tbody>
+  	<% @personnels.each do |personnel| %>
+  	<tr>
+  		<td><%= personnel.name %></td>
+  		<td><%= personnel.email %></td>
+  		
+  		<td><%= link_to 'Edit', personnels_personnel_edit_path(personnel) %></td>
+  		<td><%= link_to 'Destroy', personnels_personnel_destroy_path(personnel) %></td>
+  	</tr>
+  	<%end%>
+
+  </tbody>
+</table>

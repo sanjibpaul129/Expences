@@ -1,0 +1,9 @@
+<h1>Log In</h1>
+<%= form_tag sessions_path do %>
+ <label>Email:</label><%= text_field_tag :email, params[:email], :placeholder => "Email" %><br>
+ <br>
+ <label>Password:</label><%= password_field_tag :password, nil, :placeholder => "Password" %><br>
+ <br>
+ <%= hidden_field_tag :original_url, @original_url %>
+ <%= submit_tag 'Log in'%>
+<%end%>

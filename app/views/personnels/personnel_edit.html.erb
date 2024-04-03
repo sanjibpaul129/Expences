@@ -1,0 +1,10 @@
+<%= form_tag 'personnel_update' do %>
+ <%= hidden_field_tag "personnel_id", @personnel.id %>
+
+ <h1>Edit Personnel</h1>
+	<label>Name:</label><%= text_field_tag "name", @personnel.name %><br>
+	<br>
+	<label>Email:</label><%= text_field_tag "email", @personnel.email  %><br>
+	<br>
+	<%= submit_tag 'Update Personnel' %>
+<%end%>	

@@ -1,0 +1,19 @@
+<h1>Item Index</h1>
+<%= link_to 'New Item', personnels_item_new_url %>
+<table>
+  <thead>
+      <th>Name</th>
+      <th></th>
+      <th></th>
+  </thead>
+  <tbody>
+  	<% @items.each do |item| %>
+  	<tr>
+  		<td><%= item.name %></td>
+  		<td><%= link_to 'Edit', personnels_item_edit_path(item) %></td>
+  		<td><%= link_to 'Destroy', personnels_item_destroy_path(item) %></td>
+  	</tr>
+  	<%end%>
+
+  </tbody>
+</table>
